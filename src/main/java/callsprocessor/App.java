@@ -14,7 +14,7 @@ public class App {
         }
 
         readFileAsList(args[0]);
-        CallRegisterMapper mapper = CallRegisterMapper(new FileSystemCallsFileReader(args[0]));
+        CallRegisterMapper mapper = new CallRegisterMapper(new FileSystemCallsFileReader(args[0]));
         mapper.toModelList();
     }
 

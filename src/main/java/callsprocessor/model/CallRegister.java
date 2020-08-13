@@ -1,4 +1,4 @@
-package callsprocessor.model;
+package main.java.callsprocessor.model;
 
 public class CallRegister {
     public String serviceNumber;
@@ -6,8 +6,8 @@ public class CallRegister {
     public String callType;
     public String originNumber;
     public String companyDestination;
-    public Date startDateTime;
-    public Date endDateTime;
+    public String startDateTime;
+    public String endDateTime;
 
     /**
      * 
@@ -20,8 +20,8 @@ public class CallRegister {
      * @param endDateTime
      */
     public CallRegister(final String serviceNumber, final String billType, final String callType,
-            final String originNumber, final String companyDestination, final Date startDateTime,
-            final Date endDateTime) {
+            final String originNumber, final String companyDestination, final String startDateTime,
+            final String endDateTime) {
         
         this.serviceNumber = serviceNumber;
         this.billType = billType;

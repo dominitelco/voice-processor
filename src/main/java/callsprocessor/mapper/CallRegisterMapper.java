@@ -1,11 +1,14 @@
 package main.java.callsprocessor.mapper;
 
-import callsprocessor.model;
+import java.util.ArrayList;
+import java.util.List;
+import main.java.callsprocessor.model.CallRegister;
+import callsprocessor.*;
 
 public class CallRegisterMapper {
     private final CallsFileReader reader;
     
-    public RegisterMapper(final CallsFileReader reader) {
+    public CallRegisterMapper(final CallsFileReader reader) {
         this.reader = reader;
     }
 
@@ -14,7 +17,7 @@ public class CallRegisterMapper {
         List<String> lines = reader.readAllLines();
 
         for (String line: lines) {
-            String[] lineParts = lines.split(',');
+            String[] lineParts = line.split(",");
             String serviceNumber = lineParts[0];
             System.out.println("serviceNumber " + serviceNumber);
             // WIP: Extract informaction from each line of file..
