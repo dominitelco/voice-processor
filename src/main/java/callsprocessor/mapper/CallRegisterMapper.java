@@ -17,13 +17,12 @@ public class CallRegisterMapper {
         List<String> lines = reader.readAllLines();
 
         for (String line: lines) {
-            String[] lineParts = line.split(",");
-            String serviceNumber = lineParts[0];
-            System.out.println("serviceNumber " + serviceNumber);
-            // WIP: Extract informaction from each line of file..
-            //callRegister.add(new CallRegister());
+            String[] lineParts = line.split(","); 
+            callRegisters.add(new CallRegister(lineParts[0], lineParts[1], lineParts[2], lineParts[3], 
+            lineParts[4], lineParts[5], lineParts[6]));
         } 
 
+        System.out.println("cantidad de registros " + callRegisters.size());
         return callRegisters;
     }
 }

@@ -10,7 +10,7 @@ public class CallRegister {
     public String endDateTime;
 
     /**
-     * 
+     * This is a constructor;
      * @param serviceNumber
      * @param billType
      * @param callType
